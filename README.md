@@ -8,10 +8,8 @@ Tested on a Raspberry Pi 4 running Ubuntu Groovy attached to a cheap AHT20 + BMP
 
 A sample follows.
 
-    sensors,name=aht20,quantity=relative_humidity value=32.33
-    sensors,name=aht20,quantity=temperature value=29.84
-    sensors,name=bmp280,quantity=pressure value=100723.63
-    sensors,name=bmp280,quantity=temperature value=30.57
+    sensors,name=aht20 temperature=29.84,humidity=32.33
+    sensors,name=bmp280 temperature=30.57,pressure=100723.63
 
 # Installation
 

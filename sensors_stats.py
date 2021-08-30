@@ -12,9 +12,9 @@ aht20.init()
 while True:
     _ = sys.stdin.readline()
     aht20_humidity, aht20_temperature = aht20.measure()
-    sys.stdout.write("sensors,name=aht20,quantity=relative_humidity value=%.2f\n" % aht20_humidity)
-    sys.stdout.write("sensors,name=aht20,quantity=temperature value=%.2f\n" % aht20_temperature)
+    line = "sensors,name=aht20 temperature=%.2f,humidity=%.2f\n"
+    sys.stdout.write(line % (aht20_temperature, aht20_humidity))
     bmp280_pressure, bmp280_temperature = bmp280.measure()
-    sys.stdout.write("sensors,name=bmp280,quantity=pressure value=%.2f\n" % bmp280_pressure)
-    sys.stdout.write("sensors,name=bmp280,quantity=temperature value=%.2f\n" % bmp280_temperature)
+    line = "sensors,name=bmp280 temperature=%.2f,pressure=%.2f\n"
+    sys.stdout.write(line % (bmp280_temperature, bmp280_pressure))
     sys.stdout.flush()
